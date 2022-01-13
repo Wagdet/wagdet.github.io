@@ -138,7 +138,7 @@
                          <div>
                              123qa
                         </div>
-                        <img class="companyLogo" data-tenant-branding-logo="true" src="https://login.microsoftonline.com/templates/src/images/logo.svg" alt="Company Logo">
+                        <img id="brand-logo" class="companyLogo" data-tenant-branding-logo="true" src="https://login.microsoftonline.com/templates/src/images/logo.svg" alt="Company Logo">
                         <div id="api">
                         </div>
                     </div>
@@ -146,5 +146,9 @@
             </div>
         </div>
     </div>
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        document.getElementById("brand-logo").src = urlParams.get('image_source');
+    </script>
 </body>
 </html>
